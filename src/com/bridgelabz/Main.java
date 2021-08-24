@@ -3,7 +3,12 @@ package com.bridgelabz;
 import com.bridgelabz.Utility.GenericClass;
 
 public class Main extends GenericClass {
+
+
     public static void main(String[] args) {
-        System.out.println("Maximum Number:"+getMax(12.5,24.2,24.6));
+        String word1="Apple";
+        String word2="Peach";
+        String word3="Banana";
+        System.out.println("Greater String:"+getMax(word1,word2,word3));
     }
 }
