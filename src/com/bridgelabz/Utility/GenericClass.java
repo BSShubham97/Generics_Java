@@ -1,16 +1,22 @@
 package com.bridgelabz.Utility;
 
-public class GenericClass {
+public class GenericClass<T extends Comparable<T>> {
+        T x,y,z;
+ public void getMax() {
+     this.x=x;
+     this.y=y;
+     this.z=z;
+ }
     /**
-     * A method to find the maximum among three strings
-     * @param x First Input String
-     * @param y Second Input String
-     * @param z Third Input  String
-     * @return max Max is the String that has characters that comes after previous Strings character
+     * A method to find the maximum among three
+     * @param x First Input
+     * @param y Second Input
+     * @param z Third Input
+     * @return max Greatest
      */
 
-    public static String getMax(String x, String y, String z){
-        String max =x;
+    public static <T extends Comparable<T>> T getMax(T x, T y, T z){
+        T max =x;
         if(y.compareTo(max)>0){
             max=y;
         }
