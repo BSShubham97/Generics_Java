@@ -5,37 +5,23 @@ import com.bridgelabz.Utility.GenericClass;
 public class Main extends GenericClass {
 
 
+    public Main(Comparable[] inputArray) {
+        super(inputArray);
+    }
+
     public static void main(String[] args) {
-        /**
-         * To compute max among three Intgers
-         * @param x Integer
-         * @param y Integer
-         * @param z Integer
-         * @return max
-         */
-        System.out.println("Greatest: "+getMax(10,12,43));
 
-        /**
-         * To compute max among three double number
-         * @param x Double
-         * @param y Double
-         * @param z Double
-         * @return max
-         */
-        System.out.println("Greatest: "+getMax(87.21,32.98,63.45));
+        Integer[] intArray = {5, 3, 7, 8, 9};
+        new GenericClass(intArray).toPrint();
 
-        /**
-         * To compute max among three Strings i.e the String with the furthest characters
-         * @param x Integer
-         * @param y Integer
-         * @param z Integer
-         * @return max
-         */
 
-        String word1="Apple";
-        String word2="Banana";
-        String word3="Peach";
+        Double[] doubleArray = {42.5, 35.6, 72.5, 89.5, 94.3};
+        new GenericClass(doubleArray).toPrint();
 
-        System.out.println("Greatest: "+getMax(word1,word2,word3));
+
+        String[] stringArray = {"Apple", "Banana", "Peach", "Watermelon"};
+        new GenericClass(stringArray).toPrint();
+
+
     }
 }
