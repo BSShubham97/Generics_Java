@@ -1,17 +1,15 @@
 package com.bridgelabz.Utility;
 
-public class GenericClass<E extends Comparable<E>> {
-    private E[] inputArray;
+import java.util.ArrayList;
 
-    public GenericClass(E[] inputArray) {
-        this.inputArray = inputArray;
-    }
 
-    public void toPrint() {
-        GenericClass.toPrint(this.inputArray);
-    }
 
-    private static <E> void toPrint(E[] inputArray) {
+public class GenericClass {
+
+    ArrayList<Integer> inputArray = new ArrayList<Integer>();
+
+
+    public static <E> void toPrint(E[] inputArray) {
         for (E element : inputArray) {
             System.out.printf(" %s ", element);
         }
@@ -19,18 +17,14 @@ public class GenericClass<E extends Comparable<E>> {
     }
 
 
-    public static <E extends Comparable<E>> void getMax(E[] inputArray) {
-        E max = null;
-        for (E element : inputArray) {
-            max = element;
-            if (element.compareTo(max) > 0) {
-                max = element;
+    public static <E extends Comparable<E>> E max(E[] inputArray) {
+        E max = inputArray[0]; //sets the first value in the array as the current maximum
+        for (int i = 0; i < inputArray.length; i++) {
+            if (inputArray[i].compareTo(max) > 0) {
+                max = inputArray[i];
             }
-            if (element.compareTo(max) > 0) {
-                max = element;
-            }
+
         }
-        System.out.println(max);
+        return max;
     }
 }
-
